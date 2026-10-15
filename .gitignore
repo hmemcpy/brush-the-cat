@@ -40,6 +40,7 @@ build/Release
 *.tsbuildinfo
 
 # Framework build output and caches
+.vercel
 .cache
 .parcel-cache
 .next
@@ -60,3 +61,4 @@ out/
 .yarn/unplugged
 .yarn/install-state.gz
 .pnp.*
+.env*
