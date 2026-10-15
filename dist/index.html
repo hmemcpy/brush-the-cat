@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Brush the cat. Read the room. A little game about knowing when to stop.">
+  <title>Brush the Cat</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 60'%3E%3Ctext y='48' font-size='48'%3E🐈%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header><a href="./" class="wordmark" aria-label="Brush the Cat, restart">BRUSH THE CAT<span class="dot">.</span></a><button id="sound" class="sound" aria-label="Mute sound" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M11 5 6 9H3v6h3l5 4V5Z"/><path class="waves" d="M15 8c3 2 3 6 0 8m3-11c5 4 5 10 0 14"/><path class="muted" d="m16 9 6 6m0-6-6 6"/></svg><span id="sound-label">SOUND ON</span></button></header>
+  <main>
+    <section id="game" tabindex="0" aria-label="Cat brushing game. Drag across the cat, or hold Space to brush. Release to let the cat calm down.">
+      <canvas id="scene" aria-label="A gray-and-white cat waiting to be brushed"></canvas>
+      <div class="score" aria-label="Stroke count"><span id="score">0</span><span class="score-caption">STROKES</span></div>
+      <div id="loading">Waking the cat…</div>
+    </section>
+    <div class="instructions"><span class="mouse-icon" aria-hidden="true"></span><span id="hint">Drag to brush. <span class="hint-soft">Know when to stop.</span></span></div>
+  </main>
+  <footer><span>A LITTLE AFFECTION. AT YOUR OWN RISK.</span><span>BEST <b id="best">0</b></span></footer>
+  <div id="death" aria-hidden="true">
+    <div class="death-content"><p class="death-score">Score: <span id="final-score">0</span></p><h1>YOU DIED</h1><p class="death-note">You were warned.</p><button id="restart" disabled>Try again <span aria-hidden="true">↻</span></button></div>
+  </div>
+  <span id="status" class="sr-only" aria-live="polite">The cat is calm.</span>
+  <script type="module" src="game.js"></script>
+</body>
+</html>
